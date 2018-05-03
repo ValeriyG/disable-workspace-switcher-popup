@@ -7,7 +7,11 @@ function init() {
 }
 
 function enable() {
-    WorkspaceSwitcherPopup.WorkspaceSwitcherPopup.prototype._show = function() { return false };
+    Tweener.addTween(this._container, { opacity: 255,
+                                            time: 0.01,
+                                            transition: 'easeOutQuad'
+                                           });
+        this.actor.show();
 }
 
 function disable() {
