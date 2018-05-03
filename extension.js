@@ -1,4 +1,5 @@
 const WorkspaceSwitcherPopup = imports.ui.workspaceSwitcherPopup;
+const Tweener = imports.ui.tweener;
 
 let oldShow;
 
@@ -9,10 +10,10 @@ function init() {
 function enable() {
     WorkspaceSwitcherPopup.WorkspaceSwitcherPopup.prototype._show = function() {
         Tweener.addTween(this._container, { opacity: 255,
-                                            time: 0.5,
+                                            time: 0.8,
                                             transition: "linear"
                                            });
-        WorkspaceSwitcherPopup.WorkspaceSwitcherPopup.actor.show();
+        this.actor.show();
     }
 }
 
@@ -20,7 +21,3 @@ function disable() {
     WorkspaceSwitcherPopup.WorkspaceSwitcherPopup.prototype._show = oldShow;
 }
 
-// Backwards compatability with 3.0.2
-function main() {
-    enable();
-}
