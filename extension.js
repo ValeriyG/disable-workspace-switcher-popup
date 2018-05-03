@@ -9,8 +9,8 @@ function init() {
 function enable() {
     WorkspaceSwitcherPopup.WorkspaceSwitcherPopup.prototype._show = function() {
         Tweener.addTween(this._container, { opacity: 255,
-                                            time: 0,
-                                            delay: 0
+                                            time: 0.05,
+                                            transition: "linear"
                                            });
         this.actor.show();
     }
