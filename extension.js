@@ -12,7 +12,7 @@ function enable() {
                                             time: 0.5,
                                             transition: "linear"
                                            });
-        this.actor.show();
+        WorkspaceSwitcherPopup.WorkspaceSwitcherPopup.actor.show();
     }
 }
 
