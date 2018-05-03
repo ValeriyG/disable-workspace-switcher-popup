@@ -8,8 +8,8 @@ function init() {
 
 function enable() {
     Tweener.addTween(this._container, { opacity: 255,
-                                            time: 0.01,
-                                            transition: 'easeOutQuad'
+                                            time: 0,
+                                            delay: 0
                                            });
         this.actor.show();
 }
